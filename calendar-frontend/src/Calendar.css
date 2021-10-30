@@ -1,0 +1,108 @@
+.vertical-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background: #EFEFEF;
+}
+.row {
+  display: flex;
+  width: 100%;
+}
+.calendar {
+  display: block;
+  background: #FFFFFF;
+  width: 90%;
+  border: solid 1px #CCCCCC;
+  margin: 10px auto;
+  box-shadow: 0 0 15px 0 #C0C0C0;
+  font-size: 1.3rem;
+  text-align: center;
+
+}
+.calendar header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF;
+  cursor: default;
+  font-size: 1.4rem;
+  display: block;
+  font-weight: bold;
+  text-transform: uppercase;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.calendar header .month-display {
+  align-items: center;
+  height: 40px;
+  background: #2875C7;
+}
+.calendar header .month-label {
+  flex: 1;
+}
+.calendar header .arrow {
+  text-align: center;
+  flex-basis: 15%;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background .2s;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calendar header .arrow:hover {
+  background: #1f5c9d;
+}
+.calendar .week {
+  border-top: solid 1px #CCCCCC;
+  border-bottom: solid 1px #CCCCCC;
+}
+.calendar .week:first-child {
+  border-top: none;
+}
+.calendar .day-names {
+  color: #2875C7;
+  font-weight: bold;
+  cursor: default;
+  font-size: 1.2rem;
+}
+.calendar .day-names .day {
+  cursor: default;
+}
+.calendar .day-names .day:hover {
+  background: inherit;
+}
+.calendar .day {
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  height: 100px;
+  border-left: solid 1px #CCCCCC;
+  cursor: pointer;
+  transition: all .2s;
+  overflow: auto;
+}
+.calendar .day:hover {
+  background: #EFEFEF;
+}
+.calendar .day:first-child {
+  border-left: none;
+}
+.calendar .day.today {
+  background: #dceaf8;
+}
+.calendar .day.different-month {
+  color: #C0C0C0;
+}
+.calendar .day.selected {
+  background: #2875C7;
+  color: #FFFFFF;
+}
